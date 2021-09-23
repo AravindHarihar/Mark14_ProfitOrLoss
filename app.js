@@ -27,10 +27,16 @@ function calculateProfitAndLoss(initial, quantity, current) {
            if(lossPercentage<50)
            {
             showOutput(` Uh Oh! The loss is ${loss} and the loss percentage is ${lossPercentage}%`);
-
+            document.body.style.backgroundImage = "none";
            }
            else if(lossPercentage>50){
-           showOutput(`Uh Oh! The loss is ${loss} and the loss percentage is ${lossPercentage}%`)
+           showOutput(`Uh Oh! The loss is ${loss} and the loss percentage is ${lossPercentage}%`);
+            document.body.style.backgroundImage = "URL('/images/loss2.jpg')"
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPositionX ="0rem";
+            document.body.style.backgroundPositionY = "0rem";
+            
            }
             
 
@@ -42,10 +48,15 @@ function calculateProfitAndLoss(initial, quantity, current) {
                 var pro = profitPercentage.toFixed(2);
             if(pro<50){
             showOutput(`Congratulations!! The profit is ${p} and the profit percentage is ${pro}% !`)
-
+            document.body.style.backgroundImage = "none";
             }
             else if(pro>=50){
-            showOutput(`Congratulations!! The profit is ${p} and the profit percentage is ${pro}% !`)
+            showOutput(`Congratulations!! The profit is ${p} and the profit percentage is ${pro}% !`);
+            document.body.style.backgroundImage = "URL('images/paisa2.jpg')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPositionX ="0rem";
+            document.body.style.backgroundPositionY = "0rem";
             }
         } else if (current = initial) {
             showOutput("No loss, No gain - Your investment remains the same")
